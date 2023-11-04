@@ -1,0 +1,149 @@
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    font-size: 18px;
+    font-family: "Outfit", sans-serif;
+    background-color: var(--main-BG);
+    color: hsl(0, 0%, 100%, 60%);
+    padding: 1.25rem;
+}
+
+.Global {
+    background-color: var(--card-BG);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    max-width: 400px;
+    margin-bottom: 2rem;
+}
+
+
+article:first-child img {
+    border-radius: 1rem;
+}
+
+.Global .Fist__Image {
+    position: relative;
+}
+
+.Global .Fist__Image div {
+    background-color: hsla(178, 100%, 60%, 0.546);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: calc(100% - 4px);
+    z-index: 999;
+    border-radius: 1rem;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.Global .Fist__Image div:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.Global .Fist__Image div img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+article h2 {
+    color: white;
+    margin: 1.5rem 0.5rem 0.5rem 0;
+}
+
+article h2:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+article p {
+    margin: 1.5rem 0.5rem 0.5rem 0;
+    font-weight: 300;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0 0;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid white;
+}
+
+ul li {
+    display: flex;
+    gap: 5px;
+}
+
+article ul li:first-child {
+    color: var(--line);
+}
+
+
+
+article:last-child {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 21px;
+}
+
+article:last-child img {
+    width: 50px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+}
+
+article:last-child span {
+    color: var(--White);
+    font-weight: 400;
+}
+
+
+
+
+
+
+.attribution {
+    font-size: 15px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width:500px) {
+    .Global {
+        width: 450px;
+        margin: 0 auto 1rem;
+    }
+}
